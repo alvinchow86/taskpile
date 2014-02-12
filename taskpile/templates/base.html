@@ -1,0 +1,65 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    
+
+    <title>{% block title %}Task Pile{% endblock %}</title>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/master.css">
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/boxes.css">
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/tasks.js"></script>
+    {% block metas %}{% endblock %}
+    {% block scripts %} {% endblock %}
+  </head>
+
+
+  <body>
+    <div id="header_wrap">
+      <div id="header">
+        <div id="logo">
+          <a href="{% url taskpile.views.homepage %}"> Task Pile </a>
+        </div>
+
+        {% block header %}
+        <div id="navbar">
+
+          {% if user.is_authenticated %}
+          <div id="login_info">
+            <span>Logged in as: {{user.username}}</span>
+            <a href="{% url django.contrib.auth.views.logout_then_login %}"> [logout] </a>
+            {% endif %}
+          </div>
+        </div>
+        
+        {% endblock %}
+      </div>
+    </div>
+    <div id="main_wrap">
+      <div id="main">
+       
+        {% if user.is_authenticated %}
+
+        {% block content_main %} Hello world! {% endblock %}
+
+        {% else %}
+        {% include "tasks/login_box.html" %}
+        {% endif %}
+     
+
+      </div>
+    </div>
+
+    <div id="footer_wrap">
+      <div id="footer">
+
+      {% block footer %}  {% endblock %}
+
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{% comment %}
+Need to pass in "task" object
+{% endcomment %}
+
+<div class="active_task task_entry" id="active_task_{{ task.id }}"> 
+  <div class="task_entry_content">
+
+    <a class="checkbox" href="#" onclick="completeTask({{ task.id }}, '{{ task.assigned_user }}'); return false;"> [ &nbsp; ]</a> 
+    <div class="summary"> {{ task.summary }} </div> 
+    <div class="timestamp"> Updated: {{ task.time_updated|date:"Y-m-d H:i"}} </div>
+    <div class="floatclear"></div>
+  </div>
+</div>

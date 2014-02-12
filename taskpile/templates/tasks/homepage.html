@@ -1,0 +1,122 @@
+{% extends "tasks/base_homepage.html" %}
+
+{% block scripts %}
+<script type="text/javascript">
+var ROOT_URL = "{{ ROOT_URL }}";
+</script>
+
+<script type="text/javascript" src="{{ MEDIA_URL }}js/homepage_scripts.js"></script>
+
+{% endblock %}
+
+{% block content_left %}
+<div id="taskpile_{{ user.username }}"  class="mytaskpile collapsible header-box-dark">
+  <div class="hd"><div class="right">
+      <h2> <a class="collapse_button" href="#" onclick="return false;"> My Tasks </a>  </h2>
+  </div></div>
+
+  <div class="bd">
+
+    <div class="right">
+      <div class="inner">
+        <div class="add_task">
+         
+          <input class="new_entry" type="text" id="new_entry_{{ user.username }}" onkeypress="if(event.keyCode==13){createTaskFor('{{ user.username }}');}" />
+          <input class="add_task" type="button" value="Add task" onclick="createTaskFor('{{ user.username }}');"/>
+       
+        </div>
+       
+        <div class="active_tasks">
+    
+          {% for task in mytasks %}
+          {% include "tasks/active_task.html" %}
+          {% endfor %}
+    
+        </div>
+
+        
+        <div class="completed_tasks">
+          <h3> Completed </h3>
+          <div class="completed_tasks_box">
+            {% for task in completed_tasks %}
+            {% include "tasks/completed_task.html" %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ft"><div class="right"> </div></div>
+</div>
+
+{% for project_member in project_members %}
+<div id="taskpile_{{ project_member.username }}"  class="collapsible header-box-dark taskpile_group_member">
+  <div class="hd"><div class="right">
+      <h2> <a class="collapse_button" href="#" onclick="return false;"> {{ project_member.username }}'s Tasks </a>  </h2>
+  </div></div>
+
+  <div class="bd">
+
+    <div class="right">
+      <div class="inner">
+        <div class="add_task">
+          
+          <input class="new_entry" type="text"  id="new_entry_{{ project_member.username }}" onkeypress="if(event.keyCode==13){createTaskFor('{{ project_member.username }}');}" />
+          <input class="add_task" type="button" value="Add task" onclick="createTaskFor('{{ project_member.username }}');"/>
+          
+        </div>
+        
+        <div class="active_tasks">
+          
+          {% for task in project_member.active_tasks %}
+          {% include "tasks/active_task.html" %}
+          {% endfor %}
+          
+        </div>
+
+        
+        <div class="completed_tasks">
+          <h3> Completed </h3>
+          <div class="completed_tasks_box">
+            {% for task in project_member.completed_tasks %}
+            {% include "tasks/completed_task.html" %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ft"><div class="right"> </div></div>
+</div>
+{% endfor %}
+
+
+{% endblock content_left %}
+
+
+
+{% block content_right %}
+<div class="collapsible header-box-dark">
+  <div class="hd"><div class="right">
+      <h2><a class="collapse_button" href="#" onclick="return false;"> Sidebar </a></h2>
+  </div></div>
+
+  <div class="bd">
+
+    <div class="right">
+      <div class="inner">
+        <p>Stuff and more stuff</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft"><div class="right"> </div></div>
+
+
+</div>
+{% endblock content_right %}
+

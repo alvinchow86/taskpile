@@ -1,0 +1,133 @@
+/* STANDARD HEADER BOX (LIGHT)*/
+div.header-box-light div.hd {
+    background: transparent url(../images/headerbox_light_tl.png) no-repeat top left;
+
+}
+
+div.header-box-light div.hd div.right {
+    background: transparent url(../images/headerbox_light_tr.png) no-repeat top right;
+    height: 33px;
+    font-size: 1px;
+}
+
+div.header-box-light h2, div.header-box-light h1 {
+    font-size: 15px;
+    
+    padding-top: 10px;
+    margin-left: 15px;
+    color: #222;
+    font-weight: normal;
+   
+}
+
+div.header-box-light div.bd {
+    background: transparent url(../images/headerbox_light_ml.png) repeat-y top left;
+}
+
+div.header-box-light div.bd div.right {
+    background: transparent url(../images/headerbox_light_mr.png) repeat-y top right;
+    padding-right: 4px;
+    padding-left: 2px;
+}
+
+div.header-box-light div.inner {
+    padding: 8px 10px;
+    border-top: 1px solid #dbdbdb;
+ 
+}
+
+div.header-box-light div.ft {
+    background: transparent url(../images/headerbox_light_bl.png) no-repeat top left;
+}
+
+div.header-box-light div.ft div.right {
+    background: transparent url(../images/headerbox_light_br.png) no-repeat top right;
+    height: 10px;
+    font-size: 1px;
+}
+
+/* STANDARD HEADER BOX (DARK)*/
+div.header-box-dark div.hd {
+    background: transparent url(../images/headerbox_dark_tl.png) no-repeat top left;
+}
+
+div.header-box-dark div.hd div.right {
+    background: transparent url(../images/headerbox_dark_tr.png) no-repeat top right;
+    height: 33px;
+    font-size: 1px;
+
+
+}
+
+div.header-box-dark h2, div.header-box-dark h1 {
+    font-size: 15px;
+   
+    padding-top: 10px;
+    margin-left: 15px;
+    color: white;
+    font-weight: normal;
+    
+    
+}
+
+div.header-box-dark div.bd {
+    background: transparent url(../images/headerbox_dark_ml.png) repeat-y top left;
+}
+
+div.header-box-dark div.bd div.right {
+    background: transparent url(../images/headerbox_dark_mr.png) repeat-y top right;
+    padding-right: 4px;
+    padding-left: 2px;
+}
+
+div.header-box-dark .inner {
+    padding: 8px 10px;
+ 
+}
+
+div.header-box-dark div.ft {
+    background: transparent url(../images/headerbox_dark_bl.png) no-repeat top left;
+}
+
+div.header-box-dark div.ft div.right {
+    background: transparent url(../images/headerbox_dark_br.png) no-repeat top right;
+    height: 10px;
+    font-size: 1px;
+}
+
+
+/* STANDARD BOX (rounded corners) */
+div.standard-box .hd {
+    background: transparent url(../images/standard_box_tl.gif) no-repeat top left;
+}
+
+div.standard-box .hd .right {
+    background: transparent url(../images/standard_box_tr.gif) no-repeat top right;
+    height: 12px;
+    font-size: 1px;
+}
+
+div.standard-box .bd {
+    background: transparent url(../images/standard_box_ml.gif) repeat-y top left;
+}
+
+div.standard-box .bd .right {
+    background: transparent url(../images/standard_box_mr.gif) repeat-y top right;
+    padding-right: 4px;
+    padding-left: 2px;
+}
+
+div.standard-box .inner {
+    padding: 0px 10px;
+    padding: 10px 20px;
+}
+
+div.standard-box .ft {
+    background: transparent url(../images/standard_box_bl.gif) no-repeat top left;
+}
+
+div.standard-box .ft .right {
+    background: transparent url(../images/standard_box_br.gif) no-repeat top right;
+    height: 13px;
+    font-size: 1px;
+}

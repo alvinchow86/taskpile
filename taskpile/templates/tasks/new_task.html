@@ -1,0 +1,8 @@
+{% comment %}
+Need to pass in "task" object
+{% endcomment %}
+
+<div class="task_entry" id="task_{{ task.id }}"> 
+  <a href="#" onclick="completeTask({{ task.id }});"> [x]</a> 
+  <span> {{ task.summary }} </span> 
+</div>

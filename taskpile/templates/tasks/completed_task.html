@@ -1,0 +1,13 @@
+{% comment %}
+Need to pass in "task" object
+{% endcomment %}
+
+<div class="completed_task task_entry" id="completed_task_{{ task.id }}"> 
+  <div class="task_entry_content">
+    
+    <a class="checkbox" href="#" onclick="markTaskIncomplete({{ task.id }}, '{{ task.assigned_user }}'); return false;"> [ x ]</a> 
+    <div class="summary"> {{ task.summary }}  </div> 
+    <div class="timestamp"> Completed: {{ task.time_completed|date:"Y-m-d H:i" }} </div>
+    <div class="floatclear"></div>
+  </div>
+</div>
